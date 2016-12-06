@@ -9,7 +9,8 @@
 <script type="text/javascript">
 
 // initialization
-program=[0,2,0, 6,9,0, 7,0,5, 3,0,3, 0,1,-6,-9 ]
+notGate=[NaN,2,0, 6,9,0, 7,NaN,5, 3,NaN,3, 0,1,-6,-9 ]
+program=notGate
 programIndex=0
 
 while(true){
@@ -18,7 +19,7 @@ while(true){
 	destination=program[programIndex+1]
 
 	// input
-	if(origin!=0){
+	if(!isNaN(origin)){
 		data=program[programIndex+origin]
 	}else{
 		data=parseInt(prompt())
@@ -26,7 +27,7 @@ while(true){
 	}
 
 	// output
-	if(destination!=0){
+	if(!isNaN(destination)){
 		//copy from ORIGIN to DESTINATION 
 		program[programIndex+destination]=data
 	}else{
