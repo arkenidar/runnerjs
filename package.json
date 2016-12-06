@@ -1,0 +1,22 @@
+{
+  "name": "runnerjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "runnerjs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arkenidar/runnerjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arkenidar/runnerjs/issues"
+  },
+  "homepage": "https://github.com/arkenidar/runnerjs#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.5"
+  }
+}
