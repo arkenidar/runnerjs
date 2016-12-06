@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>runner</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<script type="text/javascript">
+
+// initialization
+
+program=[6,2,0, -2,0,0, 3, 0, 0]
+//program=[...]
+
+programIndex=0
+
+while(true){
+	// origin, destination, next
+	origin=program[programIndex]
+	destination=program[programIndex+1]
+
+	// input
+	if(origin!=0){
+		data=program[programIndex+origin]
+	}else{
+		data=parseInt(prompt())
+		console.log("in: "+data)
+	}
+
+	// output
+	if(destination!=0){
+		//copy from ORIGIN to DESTINATION 
+		program[programIndex+destination]=data
+	}else{
+		console.log("out: "+data)
+	}
+
+	next=program[programIndex+2]
+
+	// program flow
+	if(next!=0){
+		//jump to NEXT
+		programIndex=programIndex+next
+	}else{
+		//end
+		console.log("@end");
+		break;
+	}
+}
+</script>
+
+</body>
+</html>
