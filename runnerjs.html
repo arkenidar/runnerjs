@@ -9,10 +9,7 @@
 <script type="text/javascript">
 
 // initialization
-
-program=[6,2,0, -2,0,0, 3, 0, 0]
-//program=[...]
-
+program=[0,2,0, 6,9,0, 7,0,5, 3,0,3, 0,1,-6,-9 ]
 programIndex=0
 
 while(true){
@@ -39,9 +36,9 @@ while(true){
 	next=program[programIndex+2]
 
 	// program flow
-	if(next!=0){
+	if(!isNaN(next)){
 		//jump to NEXT
-		programIndex=programIndex+next
+		programIndex+=program[programIndex+3+next]
 	}else{
 		//end
 		console.log("@end");
